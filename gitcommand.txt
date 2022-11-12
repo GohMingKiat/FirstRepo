@@ -1,0 +1,54 @@
+###Branch Command###
+git branch			(Listing all branches)
+git branch <BranchName>		(Create new branch)
+git branch -d <BranchName>	(Delete branch)
+git switch <BranchName>		(Branch switching)
+git switch -c <BranchName>	(Create and switch to new branch)
+git merge <BranchName>		(Merge content, modified file if conflict) 
+
+
+###Normal Command###
+
+//File Track(Update Modified Files)
+git add <FileName>
+git add .
+git add --all
+git add -A
+
+//File Untrack
+git rm --cached <FileName>
+
+//File Restoring
+git restore <FileName>(Discrad change of modified tracked files in working directory)
+git restore --staged <FileName>(Discrad change of git add modified file in staging area) 
+
+//Showing Modifying part of tracked files
+git diff
+
+//Ignore File From Tracking
+1. Create .gitignore
+2. Content of .gitignore
+	#<Comment>
+	*<FileName> or <FileType>
+For more option:https//github.com/github/gitignore
+
+//File Commit
+git commit -m "<Message>"
+git commit -a -m "<Message>"(for modified file, change staged file after execute)
+git commit -m "<NewCommitMessage>" --amend
+
+//Commit checking
+git log
+git log --oneline
+git log -p
+
+//Reset to previous commit
+git reset <#No.>(Change staging area content, remove other latest commit)
+git rebase -i --root(###########################################################)
+
+//File Remove
+git rm <FileName>(remove tracked file only for both working tree and staging area)
+
+//File Name Changing
+git mv "<OldFileName>" "<NewFileName>"(only commit after changing name)
+

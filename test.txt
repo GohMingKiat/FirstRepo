@@ -1,6 +1,0 @@
-This is my first file!!
-
-
-Making some changes to it!!
-
-Prove of editing after uploaded to Github!!
